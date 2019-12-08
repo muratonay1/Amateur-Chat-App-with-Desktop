@@ -2,6 +2,7 @@
 
 - C# ve web service ile yaptığım masaüstü amatör sohbet uygulaması
 - Uygulamayı dilediğiniz gibi geliştirebilirsiniz.
+- Benim kurduğum sunucu local'de olduğu için web servisin connectionstring'ini siz belirlediğiniz şekilde ayarlayabilirsiniz.
 - NewtonSoft-JSON eklentisini Nuget paket yöneticisinden indiriniz.
 - Teşekkürler
 - Youtube'da yayınladığım örnek videoyu izlemenizi tavsiye ederim.
