@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Odaları_Listele">
+        <s:complexType />
+      </s:element>
+      <s:element name="Odaları_ListeleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Odaları_ListeleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Odadaki_Kişileri_Listele">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Oda_Id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Odadaki_Kişileri_ListeleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Odadaki_Kişileri_ListeleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Odadaki_Mesajları_Listele">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Oda_Id" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Odadaki_Mesajları_ListeleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Odadaki_Mesajları_ListeleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Kullanıcı_Kontrol">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="kullanıcı_adi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Kullanıcı_KontrolResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Kullanıcı_KontrolResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Kullanıcı_Ekle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="oda_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="kullanıcı_adi" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Kullanıcı_EkleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Kullanıcı_EkleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mesaj_Ekle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="oda_id" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="k_id" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="k_adi" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msj" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Mesaj_EkleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Mesaj_EkleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Odaları_ListeleSoapIn">
+    <wsdl:part name="parameters" element="tns:Odaları_Listele" />
+  </wsdl:message>
+  <wsdl:message name="Odaları_ListeleSoapOut">
+    <wsdl:part name="parameters" element="tns:Odaları_ListeleResponse" />
+  </wsdl:message>
+  <wsdl:message name="Odadaki_Kişileri_ListeleSoapIn">
+    <wsdl:part name="parameters" element="tns:Odadaki_Kişileri_Listele" />
+  </wsdl:message>
+  <wsdl:message name="Odadaki_Kişileri_ListeleSoapOut">
+    <wsdl:part name="parameters" element="tns:Odadaki_Kişileri_ListeleResponse" />
+  </wsdl:message>
+  <wsdl:message name="Odadaki_Mesajları_ListeleSoapIn">
+    <wsdl:part name="parameters" element="tns:Odadaki_Mesajları_Listele" />
+  </wsdl:message>
+  <wsdl:message name="Odadaki_Mesajları_ListeleSoapOut">
+    <wsdl:part name="parameters" element="tns:Odadaki_Mesajları_ListeleResponse" />
+  </wsdl:message>
+  <wsdl:message name="Kullanıcı_KontrolSoapIn">
+    <wsdl:part name="parameters" element="tns:Kullanıcı_Kontrol" />
+  </wsdl:message>
+  <wsdl:message name="Kullanıcı_KontrolSoapOut">
+    <wsdl:part name="parameters" element="tns:Kullanıcı_KontrolResponse" />
+  </wsdl:message>
+  <wsdl:message name="Kullanıcı_EkleSoapIn">
+    <wsdl:part name="parameters" element="tns:Kullanıcı_Ekle" />
+  </wsdl:message>
+  <wsdl:message name="Kullanıcı_EkleSoapOut">
+    <wsdl:part name="parameters" element="tns:Kullanıcı_EkleResponse" />
+  </wsdl:message>
+  <wsdl:message name="Mesaj_EkleSoapIn">
+    <wsdl:part name="parameters" element="tns:Mesaj_Ekle" />
+  </wsdl:message>
+  <wsdl:message name="Mesaj_EkleSoapOut">
+    <wsdl:part name="parameters" element="tns:Mesaj_EkleResponse" />
+  </wsdl:message>
+  <wsdl:portType name="GC_ServiceSoap">
+    <wsdl:operation name="Odaları_Listele">
+      <wsdl:input message="tns:Odaları_ListeleSoapIn" />
+      <wsdl:output message="tns:Odaları_ListeleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Odadaki_Kişileri_Listele">
+      <wsdl:input message="tns:Odadaki_Kişileri_ListeleSoapIn" />
+      <wsdl:output message="tns:Odadaki_Kişileri_ListeleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Odadaki_Mesajları_Listele">
+      <wsdl:input message="tns:Odadaki_Mesajları_ListeleSoapIn" />
+      <wsdl:output message="tns:Odadaki_Mesajları_ListeleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Kullanıcı_Kontrol">
+      <wsdl:input message="tns:Kullanıcı_KontrolSoapIn" />
+      <wsdl:output message="tns:Kullanıcı_KontrolSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Kullanıcı_Ekle">
+      <wsdl:input message="tns:Kullanıcı_EkleSoapIn" />
+      <wsdl:output message="tns:Kullanıcı_EkleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Mesaj_Ekle">
+      <wsdl:input message="tns:Mesaj_EkleSoapIn" />
+      <wsdl:output message="tns:Mesaj_EkleSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GC_ServiceSoap" type="tns:GC_ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Odaları_Listele">
+      <soap:operation soapAction="http://tempuri.org/Odaları_Listele" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Odadaki_Kişileri_Listele">
+      <soap:operation soapAction="http://tempuri.org/Odadaki_Kişileri_Listele" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Odadaki_Mesajları_Listele">
+      <soap:operation soapAction="http://tempuri.org/Odadaki_Mesajları_Listele" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Kullanıcı_Kontrol">
+      <soap:operation soapAction="http://tempuri.org/Kullanıcı_Kontrol" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Kullanıcı_Ekle">
+      <soap:operation soapAction="http://tempuri.org/Kullanıcı_Ekle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mesaj_Ekle">
+      <soap:operation soapAction="http://tempuri.org/Mesaj_Ekle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="GC_ServiceSoap12" type="tns:GC_ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Odaları_Listele">
+      <soap12:operation soapAction="http://tempuri.org/Odaları_Listele" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Odadaki_Kişileri_Listele">
+      <soap12:operation soapAction="http://tempuri.org/Odadaki_Kişileri_Listele" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Odadaki_Mesajları_Listele">
+      <soap12:operation soapAction="http://tempuri.org/Odadaki_Mesajları_Listele" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Kullanıcı_Kontrol">
+      <soap12:operation soapAction="http://tempuri.org/Kullanıcı_Kontrol" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Kullanıcı_Ekle">
+      <soap12:operation soapAction="http://tempuri.org/Kullanıcı_Ekle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Mesaj_Ekle">
+      <soap12:operation soapAction="http://tempuri.org/Mesaj_Ekle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GC_Service">
+    <wsdl:port name="GC_ServiceSoap" binding="tns:GC_ServiceSoap">
+      <soap:address location="http://192.168.2.45:58734/GC_Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="GC_ServiceSoap12" binding="tns:GC_ServiceSoap12">
+      <soap12:address location="http://192.168.2.45:58734/GC_Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
