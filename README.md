@@ -4,6 +4,8 @@
 - Uygulamayı dilediğiniz gibi geliştirebilirsiniz.
 - NewtonSoft-JSON eklentisini Nuget paket yöneticisinden indiriniz.
 - Teşekkürler
+- Youtube'da yayınladığım örnek videoyu izlemenizi tavsiye ederim.
+- https://www.youtube.com/watch?v=XfxtdB6LIQY
 
 
 # ODA SEÇME MENÜSÜ
